@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prtnr Hybrid</title>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/1014f1468c.js" crossorigin="anonymous"></script>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+/* HYBRID BACKGROUND */
+body{
+  background: linear-gradient(135deg, #b98c97, #ab96bf, #9e8bc5);
+  color:#4b3b63;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+/* GLOW HALUS */
+body::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:rgba(255,182,193,0.3);
+  filter:blur(120px);
+  top:-100px;
+  left:-100px;
+}
+
+body::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:rgba(180,150,255,0.3);
+  filter:blur(120px);
+  bottom:-100px;
+  right:-100px;
+}
+
+/* CONTAINER */
+.container{
+  flex:1;
+  text-align:center;
+  padding:60px 20px;
+  position:relative;
+  z-index:2;
+}
+
+/* LOGO */
+.logo{
+  width:85px;
+  height:85px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.15),
+    0 0 20px rgba(255,182,193,0.4);
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* HERO */
+.hero h1{
+  font-size:28px;
+  background:linear-gradient(90deg,#cc648a,#7e5fc1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:8px;
+  color:#ffffff;
+}
+
+/* BUTTON */
+.cta{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 26px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ff9ecb,#b388ff);
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.cta:hover{
+  transform:scale(1.05);
+  box-shadow:0 5px 20px rgba(179,136,255,0.6);
+}
+
+/* GRID */
+.grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:25px;
+  text-decoration:none;
+  color:#4b3b63;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px) scale(1.03);
+  background:rgba(255,255,255,0.9);
+}
+
+.card i{
+  font-size:26px;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#d47598,#9376cf);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.card h3{
+  font-size:15px;
+}
+
+.card p{
+  font-size:12px;
+  color:#7c6c9a;
+}
+
+/* HEART */
+.heart{
+  position:absolute;
+  font-size:16px;
+  animation:floatUp linear infinite;
+}
+
+/* SPARKLE */
+.sparkle{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:#fff;
+  border-radius:50%;
+  opacity:0.8;
+  animation:floatUp linear infinite;
+}
+
+/* ANIMASI */
+@keyframes floatUp{
+  from{
+    transform:translateY(100vh);
+    opacity:0;
+  }
+  to{
+    transform:translateY(-10vh);
+    opacity:1;
+  }
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#7c6c9a;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+    max-width:300px;
+  }
+
+  .hero h1{
+    font-size:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo" data-aos="zoom-in">
+  <img src="zyrraa.png">
+</div>
+
+<div class="hero" data-aos="fade-up">
+  <h1>Zyrraa.id MLBB STORE  🩷💜</h1>
+  <p>Sweet • Trustd • Premium</p>
+  <a href="#" class="cta">Explore</a>
+</div>
+
+<div class="grid" id="grid">
+
+  <a href="https://whatsapp.com/channel/0029Vb8Cwny3rZZYNVefql0m" class="card" data-aos="fade-up">
+    <i class="fa-brands fa-whatsapp"></i>
+    <h3>saluran whatsapp</h3>
+    <p>Daily stock</p>
+  </a>
+
+  <a href="https://wa.me/628132225515" class="card" data-aos="fade-up" data-aos-delay="100">
+    <i class="fa-brands fa-whatsapp"></i>
+    <h3>whatsapp admin</h3>
+    <p>Fun & trustd</p>
+  </a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 zyrraa.id store
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration:800,
+  once:true
+});
+</script>
+
+<script>
+for(let i=0;i<25;i++){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML=Math.random()>0.5 ? "🩷" : "💜";
+
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(Math.random()*5+5)+"s";
+  h.style.animationDelay=Math.random()*-10+"s";
+
+  document.body.appendChild(h);
+}
+
+for(let i=0;i<25;i++){
+  const s=document.createElement("div");
+  s.className="sparkle";
+
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDuration=(Math.random()*6+6)+"s";
+  s.style.animationDelay=Math.random()*-10+"s";
+
+  document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
