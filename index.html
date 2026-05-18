@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prtnr Hybrid</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Zyrraa.id MLBB Store</title>
+<meta name="description" content="Store Zyrraa.id - Jual akun Mobile Legends & Free Fire terpercaya, aman, premium, dan fast respon." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <script src="https://kit.fontawesome.com/1014f1468c.js" crossorigin="anonymous"></script>
 
 <style>
@@ -13,61 +21,67 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
 }
 
-/* HYBRID BACKGROUND */
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  background: linear-gradient(135deg, #b98c97, #ab96bf, #9e8bc5);
-  color:#4b3b63;
-  display:flex;
-  flex-direction:column;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#b98c97,#ab96bf,#9e8bc5);
+  color:#fff;
   min-height:100vh;
-  overflow:hidden;
+  overflow-x:hidden;
+  position:relative;
 }
 
-/* GLOW HALUS */
-body::before{
+/* BACKGROUND GLOW */
+body::before,
+body::after{
   content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  background:rgba(255,182,193,0.3);
+  position:fixed;
+  width:320px;
+  height:320px;
+  border-radius:50%;
   filter:blur(120px);
-  top:-100px;
-  left:-100px;
+  z-index:0;
+  pointer-events:none;
+}
+
+body::before{
+  background:rgba(255,182,193,0.35);
+  top:-120px;
+  left:-120px;
 }
 
 body::after{
-  content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  background:rgba(180,150,255,0.3);
-  filter:blur(120px);
-  bottom:-100px;
-  right:-100px;
+  background:rgba(180,150,255,0.35);
+  bottom:-120px;
+  right:-120px;
 }
 
 /* CONTAINER */
 .container{
-  flex:1;
-  text-align:center;
-  padding:60px 20px;
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px 40px;
   position:relative;
   z-index:2;
 }
 
 /* LOGO */
 .logo{
-  width:85px;
-  height:85px;
-  margin:0 auto 20px;
+  width:95px;
+  height:95px;
+  margin:0 auto 24px;
   border-radius:50%;
   overflow:hidden;
+  border:3px solid rgba(255,255,255,0.25);
   box-shadow:
-    0 8px 20px rgba(0,0,0,0.15),
-    0 0 20px rgba(255,182,193,0.4);
+    0 10px 30px rgba(0,0,0,0.15),
+    0 0 25px rgba(255,182,193,0.45);
 }
 
 .logo img{
@@ -77,126 +91,196 @@ body::after{
 }
 
 /* HERO */
+.hero{
+  text-align:center;
+}
+
 .hero h1{
-  font-size:28px;
-  background:linear-gradient(90deg,#cc648a,#7e5fc1);
+  font-size:38px;
+  font-weight:700;
+  line-height:1.2;
+  background:linear-gradient(90deg,#ffd4e7,#ffffff,#d8c1ff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-  margin-top:8px;
-  color:#ffffff;
+  margin-top:10px;
+  color:rgba(255,255,255,0.85);
+  font-size:15px;
+  letter-spacing:1px;
 }
 
 /* BUTTON */
 .cta{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 26px;
-  border-radius:30px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:24px;
+  padding:14px 28px;
+  border-radius:999px;
   background:linear-gradient(90deg,#ff9ecb,#b388ff);
   color:#fff;
   text-decoration:none;
-  font-weight:500;
-  transition:0.3s;
+  font-weight:600;
+  transition:.3s ease;
+  box-shadow:0 10px 25px rgba(179,136,255,0.35);
 }
 
 .cta:hover{
-  transform:scale(1.05);
-  box-shadow:0 5px 20px rgba(179,136,255,0.6);
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 15px 35px rgba(179,136,255,0.55);
 }
 
 /* GRID */
 .grid{
-  margin-top:50px;
+  margin-top:55px;
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:20px;
-  max-width:600px;
-  margin-left:auto;
-  margin-right:auto;
 }
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(12px);
-  border-radius:20px;
-  padding:25px;
+  position:relative;
+  overflow:hidden;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:24px;
+  padding:28px 22px;
   text-decoration:none;
-  color:#4b3b63;
-  transition:0.3s;
+  color:#fff;
+  transition:.35s ease;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0)
+  );
+  pointer-events:none;
 }
 
 .card:hover{
-  transform:translateY(-5px) scale(1.03);
-  background:rgba(255,255,255,0.9);
+  transform:translateY(-6px);
+  background:rgba(255,255,255,0.18);
+  border-color:rgba(255,255,255,0.3);
 }
 
 .card i{
-  font-size:26px;
-  margin-bottom:10px;
-  background:linear-gradient(90deg,#d47598,#9376cf);
+  font-size:30px;
+  margin-bottom:16px;
+  background:linear-gradient(90deg,#ffd3e6,#ffffff,#d7c0ff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .card h3{
-  font-size:15px;
+  font-size:17px;
+  font-weight:600;
+  text-transform:capitalize;
+  margin-bottom:6px;
 }
 
 .card p{
-  font-size:12px;
-  color:#7c6c9a;
+  font-size:13px;
+  color:rgba(255,255,255,0.72);
 }
 
-/* HEART */
+/* FLOATING */
+.heart,
+.sparkle{
+  position:fixed;
+  pointer-events:none;
+  z-index:1;
+}
+
 .heart{
-  position:absolute;
   font-size:16px;
   animation:floatUp linear infinite;
 }
 
-/* SPARKLE */
 .sparkle{
-  position:absolute;
   width:4px;
   height:4px;
   background:#fff;
   border-radius:50%;
-  opacity:0.8;
+  opacity:.8;
   animation:floatUp linear infinite;
 }
 
-/* ANIMASI */
+/* ANIMATION */
 @keyframes floatUp{
   from{
     transform:translateY(100vh);
     opacity:0;
   }
-  to{
-    transform:translateY(-10vh);
+
+  20%{
     opacity:1;
+  }
+
+  to{
+    transform:translateY(-120px);
+    opacity:0;
   }
 }
 
 /* FOOTER */
 footer{
+  position:relative;
+  z-index:2;
   text-align:center;
-  padding:20px;
-  color:#7c6c9a;
+  padding:25px 20px 35px;
+  color:rgba(255,255,255,0.75);
+  font-size:14px;
 }
 
 /* RESPONSIVE */
-@media(max-width:768px){
+@media(max-width:900px){
+
   .grid{
-    grid-template-columns:1fr;
-    max-width:300px;
+    grid-template-columns:repeat(2,1fr);
   }
 
   .hero h1{
-    font-size:22px;
+    font-size:30px;
+  }
+}
+
+@media(max-width:600px){
+
+  .container{
+    padding-top:60px;
+  }
+
+  .hero h1{
+    font-size:24px;
+  }
+
+  .hero p{
+    font-size:13px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .card{
+    padding:24px 20px;
+  }
+
+  .cta{
+    width:100%;
+    max-width:260px;
   }
 }
 </style>
@@ -206,44 +290,74 @@ footer{
 
 <div class="container">
 
-<div class="logo" data-aos="zoom-in">
-  <img src="zyrraa.png">
-</div>
+  <!-- LOGO -->
+  <div class="logo" data-aos="zoom-in">
+    <img src="zyrraa.png" alt="Logo Zyrraa.id">
+  </div>
 
-<div class="hero" data-aos="fade-up">
-  <h1>Zyrraa.id MLBB STORE  🩷💜</h1>
-  <p>Sweet • Trustd • Premium</p>
-  <a href="#" class="cta">Explore</a>
-</div>
+  <!-- HERO -->
+  <div class="hero" data-aos="fade-up">
+    <h1>Zyrraa.id MLBB Store 🩷💜</h1>
 
-<div class="grid" id="grid">
+    <p>
+      Premium • Trusted • Fast Response
+    </p>
 
-  <a href="https://whatsapp.com/channel/0029Vb8Cwny3rZZYNVefql0m" class="card" data-aos="fade-up">
-    <i class="fa-brands fa-whatsapp"></i>
-    <h3>saluran whatsapp</h3>
-    <p>Daily stock</p>
-  </a>
+    <a href="https://rzamawla90-cmyk.github.io/zyrraa.id" class="cta">
+      <i class="fa-solid fa-globe"></i>
+      Visit Website
+    </a>
+  </div>
 
-  <a href="https://wa.me/628132225515" class="card" data-aos="fade-up" data-aos-delay="100">
-    <i class="fa-brands fa-whatsapp"></i>
-    <h3>whatsapp admin</h3>
-    <p>Fun & trustd</p>
-  </a>
+  <!-- GRID -->
+  <div class="grid">
 
-  <a href="https://t.me/zyrraa90" class="card" data-aos="fade-up" data-aos-delay="100">
-    <i class="fa-brands fa-twitter"></i>
-    <h3>saluran twiter</h3>
-    <p>Safe & trustd</p>
-  </a>
-</div>
+    <a href="https://whatsapp.com/channel/0029Vb8Cwny3rZZYNVefql0m"
+       class="card"
+       data-aos="fade-up">
+
+      <i class="fa-brands fa-whatsapp"></i>
+
+      <h3>Saluran WhatsApp</h3>
+
+      <p>Daily stock akun MLBB & FF</p>
+    </a>
+
+    <a href="https://wa.me/628132225515"
+       class="card"
+       data-aos="fade-up"
+       data-aos-delay="100">
+
+      <i class="fa-brands fa-whatsapp"></i>
+
+      <h3>WhatsApp Admin</h3>
+
+      <p>Fast response & trusted seller</p>
+    </a>
+
+    <a href="https://t.me/zyrraa90"
+       class="card"
+       data-aos="fade-up"
+       data-aos-delay="200">
+
+      <i class="fa-brands fa-telegram"></i>
+
+      <h3>Telegram Channel</h3>
+
+      <p>Update stok & promo terbaru</p>
+    </a>
+
+  </div>
 
 </div>
 
 <footer>
-© 2026 zyrraa.id store
+  © 2026 Zyrraa.id Store — All Rights Reserved
 </footer>
 
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
 AOS.init({
   duration:800,
@@ -251,28 +365,43 @@ AOS.init({
 });
 </script>
 
+<!-- FLOATING EFFECT -->
 <script>
-for(let i=0;i<25;i++){
-  const h=document.createElement("div");
-  h.className="heart";
-  h.innerHTML=Math.random()>0.5 ? "🩷" : "💜";
+for(let i = 0; i < 20; i++){
 
-  h.style.left=Math.random()*100+"vw";
-  h.style.animationDuration=(Math.random()*5+5)+"s";
-  h.style.animationDelay=Math.random()*-10+"s";
+  const heart = document.createElement("div");
 
-  document.body.appendChild(h);
+  heart.className = "heart";
+
+  heart.innerHTML = Math.random() > 0.5 ? "🩷" : "💜";
+
+  heart.style.left = Math.random() * 100 + "vw";
+
+  heart.style.animationDuration =
+    (Math.random() * 5 + 5) + "s";
+
+  heart.style.animationDelay =
+    Math.random() * -10 + "s";
+
+  document.body.appendChild(heart);
 }
 
-for(let i=0;i<25;i++){
-  const s=document.createElement("div");
-  s.className="sparkle";
+for(let i = 0; i < 25; i++){
 
-  s.style.left=Math.random()*100+"vw";
-  s.style.animationDuration=(Math.random()*6+6)+"s";
-  s.style.animationDelay=Math.random()*-10+"s";
+  const sparkle = document.createElement("div");
 
-  document.body.appendChild(s);
+  sparkle.className = "sparkle";
+
+  sparkle.style.left =
+    Math.random() * 100 + "vw";
+
+  sparkle.style.animationDuration =
+    (Math.random() * 6 + 6) + "s";
+
+  sparkle.style.animationDelay =
+    Math.random() * -10 + "s";
+
+  document.body.appendChild(sparkle);
 }
 </script>
 
