@@ -4,13 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Zyrraa.id MLBB Store</title>
-<meta name="description" content="Store Zyrraa.id - Jual akun Mobile Legends & Free Fire terpercaya, aman, premium, dan fast respon." />
+<title>Zyrraa.id Store</title>
+
+<meta name="description"
+content="Zyrraa.id Store - Premium gaming store dengan tampilan modern, trusted, dan fast response." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -29,202 +31,65 @@ html{
 
 body{
   font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#b98c97,#ab96bf,#9e8bc5);
-  color:#fff;
   min-height:100vh;
   overflow-x:hidden;
+  color:white;
+
+  background:
+  radial-gradient(circle at top,
+  #2b173c 0%,
+  #130f1d 45%,
+  #09070e 100%);
+
   position:relative;
 }
 
-/* BACKGROUND GLOW */
+/* GLOW */
 body::before,
 body::after{
   content:"";
   position:fixed;
-  width:320px;
-  height:320px;
+  width:420px;
+  height:420px;
   border-radius:50%;
-  filter:blur(120px);
+  filter:blur(140px);
   z-index:0;
   pointer-events:none;
 }
 
 body::before{
-  background:rgba(255,182,193,0.35);
-  top:-120px;
-  left:-120px;
+  background:rgba(255,170,220,.18);
+  top:-150px;
+  left:-150px;
 }
 
 body::after{
-  background:rgba(180,150,255,0.35);
-  bottom:-120px;
-  right:-120px;
+  background:rgba(175,120,255,.14);
+  bottom:-150px;
+  right:-150px;
 }
 
-/* CONTAINER */
-.container{
-  width:100%;
-  max-width:1100px;
-  margin:auto;
-  padding:70px 20px 40px;
-  position:relative;
-  z-index:2;
-}
-
-/* LOGO */
-.logo{
-  width:95px;
-  height:95px;
-  margin:0 auto 24px;
-  border-radius:50%;
-  overflow:hidden;
-  border:3px solid rgba(255,255,255,0.25);
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.15),
-    0 0 25px rgba(255,182,193,0.45);
-}
-
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-}
-
-.hero h1{
-  font-size:38px;
-  font-weight:700;
-  line-height:1.2;
-  background:linear-gradient(90deg,#ffd4e7,#ffffff,#d8c1ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-  margin-top:10px;
-  color:rgba(255,255,255,0.85);
-  font-size:15px;
-  letter-spacing:1px;
-}
-
-/* BUTTON */
-.cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  margin-top:24px;
-  padding:14px 28px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#ff9ecb,#b388ff);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  transition:.3s ease;
-  box-shadow:0 10px 25px rgba(179,136,255,0.35);
-}
-
-.cta:hover{
-  transform:translateY(-3px) scale(1.03);
-  box-shadow:0 15px 35px rgba(179,136,255,0.55);
-}
-
-/* GRID */
-.grid{
-  margin-top:55px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-/* CARD */
-.card{
-  position:relative;
-  overflow:hidden;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.15);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-radius:24px;
-  padding:28px 22px;
-  text-decoration:none;
-  color:#fff;
-  transition:.35s ease;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    135deg,
-    rgba(255,255,255,0.12),
-    rgba(255,255,255,0)
-  );
-  pointer-events:none;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  background:rgba(255,255,255,0.18);
-  border-color:rgba(255,255,255,0.3);
-}
-
-.card i{
-  font-size:30px;
-  margin-bottom:16px;
-  background:linear-gradient(90deg,#ffd3e6,#ffffff,#d7c0ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.card h3{
-  font-size:17px;
-  font-weight:600;
-  text-transform:capitalize;
-  margin-bottom:6px;
-}
-
-.card p{
-  font-size:13px;
-  color:rgba(255,255,255,0.72);
-}
-
-/* FLOATING */
-.heart,
-.sparkle{
+/* PARTICLE */
+.star{
   position:fixed;
-  pointer-events:none;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:white;
+  opacity:.6;
+  animation:floatUp linear infinite;
   z-index:1;
 }
 
-.heart{
-  font-size:16px;
-  animation:floatUp linear infinite;
-}
-
-.sparkle{
-  width:4px;
-  height:4px;
-  background:#fff;
-  border-radius:50%;
-  opacity:.8;
-  animation:floatUp linear infinite;
-}
-
-/* ANIMATION */
 @keyframes floatUp{
+
   from{
     transform:translateY(100vh);
     opacity:0;
   }
 
   20%{
-    opacity:1;
+    opacity:.7;
   }
 
   to{
@@ -233,14 +98,263 @@ body::after{
   }
 }
 
+/* CONTAINER */
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px 40px;
+  position:relative;
+  z-index:2;
+}
+
+/* LOGO */
+.logo{
+  position:relative;
+
+  width:150px;
+  height:150px;
+
+  margin:0 auto 30px;
+
+  border-radius:50%;
+  overflow:hidden;
+
+  animation:floatLogo 4s ease-in-out infinite;
+
+  box-shadow:
+  0 0 40px rgba(255,180,230,.18),
+  0 0 80px rgba(170,120,255,.14);
+}
+
+.logo::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+
+  border-radius:50%;
+
+  background:linear-gradient(
+  135deg,
+  rgba(255,255,255,.45),
+  rgba(255,255,255,.02),
+  rgba(215,170,255,.35)
+  );
+
+  z-index:-1;
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+@keyframes floatLogo{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+}
+
+.hero h1{
+  font-family:'Cinzel',serif;
+
+  font-size:58px;
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  background:linear-gradient(
+  90deg,
+  #ffe2f5,
+  #ffffff,
+  #d7c3ff
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:14px;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:15px;
+  letter-spacing:2px;
+}
+
+/* BUTTON */
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  margin-top:28px;
+
+  padding:15px 32px;
+
+  border-radius:999px;
+
+  text-decoration:none;
+  color:white;
+
+  font-weight:600;
+
+  position:relative;
+  overflow:hidden;
+
+  background:linear-gradient(
+  90deg,
+  #ff9ed6,
+  #be97ff
+  );
+
+  box-shadow:
+  0 0 30px rgba(190,151,255,.28);
+
+  transition:.35s;
+}
+
+.cta::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+  90deg,
+  transparent,
+  rgba(255,255,255,.18),
+  transparent
+  );
+
+  transform:translateX(-100%);
+  transition:.6s;
+}
+
+.cta:hover::before{
+  transform:translateX(100%);
+}
+
+.cta:hover{
+  transform:translateY(-5px);
+}
+
+/* GRID */
+.grid{
+  margin-top:70px;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:24px;
+}
+
+/* CARD */
+.card{
+  position:relative;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+  180deg,
+  rgba(255,255,255,.08),
+  rgba(255,255,255,.03)
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:30px;
+
+  padding:34px 26px;
+
+  text-decoration:none;
+  color:white;
+
+  backdrop-filter:blur(16px);
+
+  transition:.4s;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+  135deg,
+  rgba(255,255,255,.08),
+  transparent
+  );
+
+  pointer-events:none;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+
+  border-color:rgba(255,255,255,.18);
+
+  box-shadow:
+  0 0 35px rgba(201,155,255,.12);
+}
+
+.card i{
+  font-size:34px;
+  margin-bottom:20px;
+
+  background:linear-gradient(
+  90deg,
+  #ffd9ef,
+  #d0b2ff
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.card h3{
+  font-size:19px;
+  margin-bottom:8px;
+}
+
+.card p{
+  font-size:14px;
+  line-height:1.8;
+
+  color:rgba(255,255,255,.68);
+}
+
 /* FOOTER */
 footer{
   position:relative;
   z-index:2;
+
   text-align:center;
-  padding:25px 20px 35px;
-  color:rgba(255,255,255,0.75);
-  font-size:14px;
+
+  padding:40px 20px;
+
+  margin-top:80px;
+
+  color:rgba(255,255,255,.45);
+
+  border-top:1px solid rgba(255,255,255,.05);
 }
 
 /* RESPONSIVE */
@@ -251,7 +365,7 @@ footer{
   }
 
   .hero h1{
-    font-size:30px;
+    font-size:42px;
   }
 }
 
@@ -261,21 +375,27 @@ footer{
     padding-top:60px;
   }
 
+  .logo{
+    width:120px;
+    height:120px;
+  }
+
   .hero h1{
-    font-size:24px;
+    font-size:30px;
   }
 
   .hero p{
     font-size:13px;
+    line-height:1.7;
   }
 
   .grid{
     grid-template-columns:1fr;
-    gap:16px;
+    gap:18px;
   }
 
   .card{
-    padding:24px 20px;
+    padding:28px 22px;
   }
 
   .cta{
@@ -288,6 +408,26 @@ footer{
 
 <body>
 
+<!-- PARTICLE -->
+<script>
+for(let i=0;i<40;i++){
+
+  const star=document.createElement("div");
+
+  star.className="star";
+
+  star.style.left=Math.random()*100+"vw";
+
+  star.style.animationDuration=
+  (Math.random()*8+6)+"s";
+
+  star.style.animationDelay=
+  Math.random()*-10+"s";
+
+  document.body.appendChild(star);
+}
+</script>
+
 <div class="container">
 
   <!-- LOGO -->
@@ -297,54 +437,68 @@ footer{
 
   <!-- HERO -->
   <div class="hero" data-aos="fade-up">
-    <h1>Zyrraa.id MLBB Store 🩷💜</h1>
+
+    <h1>Zyrraa.id Store</h1>
 
     <p>
-      Premium • Trusted • Fast Response
+      TRUSTED • FAST RESPONSE • SAFE PAYMENT
     </p>
 
-    <a href="https://rzamawla90-cmyk.github.io/zyrraa.id" class="cta">
+    <a href="https://rzamawla90-cmyk.github.io/zyrraa.id"
+    class="cta">
+
       <i class="fa-solid fa-globe"></i>
       Visit Website
+
     </a>
+
   </div>
 
   <!-- GRID -->
   <div class="grid">
 
     <a href="https://whatsapp.com/channel/0029Vb8Cwny3rZZYNVefql0m"
-       class="card"
-       data-aos="fade-up">
+    class="card"
+    data-aos="fade-up">
 
       <i class="fa-brands fa-whatsapp"></i>
 
       <h3>Saluran WhatsApp</h3>
 
-      <p>Daily stock akun MLBB & FF</p>
+      <p>
+        Tempat update terbaru dan informasi dari Zyrraa.id.
+      </p>
+
     </a>
 
     <a href="https://wa.me/628132225515"
-       class="card"
-       data-aos="fade-up"
-       data-aos-delay="100">
+    class="card"
+    data-aos="fade-up"
+    data-aos-delay="100">
 
       <i class="fa-brands fa-whatsapp"></i>
 
       <h3>WhatsApp Admin</h3>
 
-      <p>Fast response & trusted seller</p>
+      <p>
+        Hubungi admin untuk informasi dan komunikasi lebih lanjut.
+      </p>
+
     </a>
 
     <a href="https://t.me/zyrraa90"
-       class="card"
-       data-aos="fade-up"
-       data-aos-delay="200">
+    class="card"
+    data-aos="fade-up"
+    data-aos-delay="200">
 
       <i class="fa-brands fa-telegram"></i>
 
-      <h3>Telegram Channel</h3>
+      <h3>Telegram</h3>
 
-      <p>Update stok & promo terbaru</p>
+      <p>
+        Bergabung dengan komunitas dan update terbaru Zyrraa.id.
+      </p>
+
     </a>
 
   </div>
@@ -360,49 +514,9 @@ footer{
 
 <script>
 AOS.init({
-  duration:800,
+  duration:900,
   once:true
 });
-</script>
-
-<!-- FLOATING EFFECT -->
-<script>
-for(let i = 0; i < 20; i++){
-
-  const heart = document.createElement("div");
-
-  heart.className = "heart";
-
-  heart.innerHTML = Math.random() > 0.5 ? "🩷" : "💜";
-
-  heart.style.left = Math.random() * 100 + "vw";
-
-  heart.style.animationDuration =
-    (Math.random() * 5 + 5) + "s";
-
-  heart.style.animationDelay =
-    Math.random() * -10 + "s";
-
-  document.body.appendChild(heart);
-}
-
-for(let i = 0; i < 25; i++){
-
-  const sparkle = document.createElement("div");
-
-  sparkle.className = "sparkle";
-
-  sparkle.style.left =
-    Math.random() * 100 + "vw";
-
-  sparkle.style.animationDuration =
-    (Math.random() * 6 + 6) + "s";
-
-  sparkle.style.animationDelay =
-    Math.random() * -10 + "s";
-
-  document.body.appendChild(sparkle);
-}
 </script>
 
 </body>
